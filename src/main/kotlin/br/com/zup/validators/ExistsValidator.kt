@@ -1,14 +1,11 @@
 package br.com.zup.validators
 
-
-import javax.inject.Inject
 import javax.inject.Singleton
 import javax.persistence.EntityManager
-import javax.persistence.PersistenceContext
 import javax.transaction.Transactional
 import javax.validation.ConstraintValidator
 import javax.validation.ConstraintValidatorContext
-import javax.validation.ValidationException
+
 
 
 

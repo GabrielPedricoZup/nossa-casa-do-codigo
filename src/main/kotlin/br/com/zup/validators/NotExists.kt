@@ -6,14 +6,12 @@ import kotlin.reflect.KClass
 
 @Target(AnnotationTarget.FIELD)
 @Retention(AnnotationRetention.RUNTIME)
-@Constraint(validatedBy = [ExistsValidator::class])
+@Constraint(validatedBy = [NotExistsValidator::class])
 @MustBeDocumented
-annotation class Exists(
-    val message: String = "Não existe esse email",
+annotation class NotExists(
+    val message: String = "Já existe esse cadastro",
     val fieldName: String,
     val domainClass: String,
     val groups: Array<KClass<Any>> = [],
     val payload: Array<KClass<Payload>> = []
 )
-
-

@@ -1,5 +1,6 @@
 package br.com.zup.models
 
+import br.com.zup.dtos.NovoAutorResponse
 import java.time.LocalDateTime
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
@@ -15,4 +16,8 @@ class Autor (val nome: String?,
     var id: Long? = null
 
     val criadoEm: LocalDateTime = LocalDateTime.now()
+
+    fun paraNovoAutorResponse(): NovoAutorResponse{
+        return NovoAutorResponse(nome,descricao)
+    }
 }
